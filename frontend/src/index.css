@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* BBVA Brand Colors */
+    --bbva-blue: 207 100% 25%;        /* #004481 - BBVA Corporate Blue */
+    --bbva-blue-light: 207 84% 40%;   /* #1973B8 - BBVA Secondary Blue */
+    --bbva-blue-dark: 207 100% 20%;   /* #003366 - Darker variant */
+    --bbva-green: 142 61% 45%;        /* #2DCCCD → #3DB86E - Sustainability Green */
+    --bbva-green-light: 142 61% 55%;  /* Lighter green */
+    --bbva-gray: 210 11% 96%;         /* #F4F6F9 - Light gray background */
+    --bbva-gray-dark: 210 11% 71%;    /* #B0B9C5 - Medium gray */
+    
+    /* Semantic tokens based on BBVA colors */
+    --background: 0 0% 100%;
+    --foreground: 207 100% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 207 100% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 100% 20%;
+    
+    --primary: 207 100% 25%;           /* BBVA Blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 207 84% 40%;          /* BBVA Light Blue */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 11% 96%;              /* BBVA Gray */
+    --muted-foreground: 207 20% 40%;
+    
+    --accent: 142 61% 45%;             /* Sustainability Green */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 11% 90%;
+    --input: 210 11% 90%;
+    --ring: 207 100% 25%;
+    
+    /* Chat specific colors */
+    --chat-user-bg: 207 100% 25%;      /* User message - BBVA Blue */
+    --chat-assistant-bg: 0 0% 98%;     /* Assistant message - Light gray */
+    --chat-input-bg: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-bbva: linear-gradient(135deg, hsl(var(--bbva-blue)), hsl(var(--bbva-blue-light)));
+    --gradient-sustainability: linear-gradient(135deg, hsl(var(--bbva-green)), hsl(var(--bbva-green-light)));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-bbva: 0 4px 12px rgba(0, 68, 129, 0.15);
+    
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 207 100% 8%;
+    --foreground: 210 40% 98%;
+    
+    --card: 207 100% 10%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 207 100% 10%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 207 84% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 207 50% 30%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 207 50% 15%;
+    --muted-foreground: 210 20% 70%;
+    
+    --accent: 142 61% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 207 40% 20%;
+    --input: 207 40% 20%;
+    --ring: 207 84% 50%;
+    
+    --chat-user-bg: 207 84% 40%;
+    --chat-assistant-bg: 207 50% 15%;
+    --chat-input-bg: 207 50% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
